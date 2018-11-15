@@ -10,84 +10,57 @@ Podium CSS is a utility first CSS framework.
 
 Here's an example:
 
-## Buttons
-
-Normal sized
-
-<button class="rounded bg-blue hover:bg-blueDark transition pointer text-white py-3 px-4 mr-3">
-  Primary
-</button>
-
-<button class="rounded bg-red bg-redDark transition pointer text-white py-3 px-4 mr-3">
-  Danger
-</button>
-
-<button class="rounded bg-white bg-iron transition cursor-not-allowed text-white py-3 px-4 mr-3">
-  Disabled
-</button>
-
-```html
-<button
-  class="rounded bg-blue hover:bg-blueDark transition pointer text-white py-3 px-4 mr-3"
->
-  Primary
-</button>
-
-<button
-  class="rounded bg-red bg-redDark transition pointer text-white py-3 px-4 mr-3"
->
-  Danger
-</button>
-
-<button
-  class="rounded bg-white bg-iron transition cursor-not-allowed text-white py-3 px-4 mr-3"
->
-  Disabled
-</button>
-```
-
 ## Message Bubbles
 
 <div class="flex flex-col">
-  <div class="text-sm bg-blue text-white p-4 rounded-t-lg rounded-br-lg rounded-bl self-start">
+  <div class="text-center text-jumbo text-xs">
+    Webchat Conversation initated
+  </div>
+  <a
+    href="http://mrmrs.cc/writing/2016/03/24/scalable-css/"
+    class="no-underline hover:underline w-1/3 mx-auto text-jumbo text-xs truncate"
+  >
+    http://mrmrs.cc/writing/2016/03/24/scalable-css/#this-is-a-very-long-one-for-sure
+  </a>
+  <div class="chat-left text-sm bg-blue text-white p-4 self-start">
     Hello, I would like to buy a car.
   </div>
-  <div class="text-sm bg-mystic p-4 rounded-t-lg rounded-bl-lg rounded-br self-end">
+  <div class="chat-right text-sm bg-mystic p-4 self-end">
     Great when could you do that
   </div>
 </div>
 
 ```html
 <div class="flex flex-col">
-  <div
-    class="text-sm bg-blue text-white p-4 rounded-t-lg rounded-br-lg rounded-bl self-start"
+  <div class="text-center text-jumbo text-xs">
+    Webchat Conversation initated
+  </div>
+  <a
+    href="http://mrmrs.cc/writing/2016/03/24/scalable-css/"
+    class="no-underline hover:underline w-1/3 mx-auto text-jumbo text-xs truncate"
   >
+    http://mrmrs.cc/writing/2016/03/24/scalable-css/#this-is-a-very-long-one-for-sure
+  </a>
+  <div class="chat-left text-sm bg-blue text-white p-4 self-start">
     Hello, I would like to buy a car.
   </div>
-  <div class="text-sm bg-mystic rounded-t-lg p-4 rounded-bl-lg self-end">
-    Great! when could we do that?
+  <div class="chat-right text-sm bg-mystic p-4 self-end">
+    Great when could you do that
   </div>
 </div>
 ```
 
 ## Card
 
-<div class="fade-in p-4 cursor-pointer bg-white max-w-xs w-full shadow select-none overflow-hidden mx-auto">
-  <p class="font-semibold text-lg mb-1 text-black">New Project</p>
-  <p class="text-mineshaft mb-2">
-    Create a new project from a variety of starting templates.
-  </p>
+<div class="bg-mystic p-10">
+  <div class="p-4 bg-white max-w-xs w-full shadow-md mx-auto">
+    <p class="font-semibold text-center text-blue text-5xl mb-1">50%</p>
+    <p class="text-iron mb-2 text-center text-sm ">Review Invitaitons</p>
+  </div>
 </div>
 
 ```html
-<div
-  class="fade-in p-4 cursor-pointer bg-white rounded max-w-xs w-full shadow select-none overflow-hidden mx-auto"
->
-  <p class="font-semibold text-lg mb-1 text-black">New Project</p>
-  <p class="text-mineshaft mb-2">
-    Create a new project from a variety of starting templates.
-  </p>
-</div>
+<div class="bg-white max-w-xs shadow-md mx-auto">...content..</div>
 ```
 
 ## Flexbox

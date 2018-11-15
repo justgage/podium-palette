@@ -55,13 +55,14 @@ const colors = {
   iron: '#cccccc',
   mystic: '#e4e9f0',
   whiteSmoke: '#f5f5f7',
+  whiteSmokeDark: '#eaeaee',
   fbMessenger: '#0084ff',
   blue: '#4c76e0',
   blueDark: '#2353cc',
-  red: '#e73e51'
+  red: '#e73e51',
   // --- less commonly used colors ---
   // armyGreen: '#7b7257',
-  // steel: '#778692',
+  steel: '#778692'
   // tan: '#e9e5e0',
   // lightSteel: '#adb6be',
   // lightTan: '#f4f2ef',
