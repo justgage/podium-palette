@@ -1,0 +1,107 @@
+---
+name: Catalog
+---
+
+import './output.css';
+
+# Intro
+
+Podium CSS is a utility first CSS framework.
+
+Here's an example:
+
+## Buttons
+
+Normal sized
+
+<button class="rounded bg-blue hover:bg-blueDark transition pointer text-white py-3 px-4 mr-3">
+  Primary
+</button>
+
+<button class="rounded bg-red bg-redDark transition pointer text-white py-3 px-4 mr-3">
+  Danger
+</button>
+
+<button class="rounded bg-white bg-iron transition cursor-not-allowed text-white py-3 px-4 mr-3">
+  Disabled
+</button>
+
+```html
+<button
+  class="rounded bg-blue hover:bg-blueDark transition pointer text-white py-3 px-4 mr-3"
+>
+  Primary
+</button>
+
+<button
+  class="rounded bg-red bg-redDark transition pointer text-white py-3 px-4 mr-3"
+>
+  Danger
+</button>
+
+<button
+  class="rounded bg-white bg-iron transition cursor-not-allowed text-white py-3 px-4 mr-3"
+>
+  Disabled
+</button>
+```
+
+## Message Bubbles
+
+<div class="flex flex-col">
+  <div class="text-sm bg-blue text-white p-4 rounded-t-lg rounded-br-lg rounded-bl self-start">
+    Hello, I would like to buy a car.
+  </div>
+  <div class="text-sm bg-mystic p-4 rounded-t-lg rounded-bl-lg rounded-br self-end">
+    Great when could you do that
+  </div>
+</div>
+
+```html
+<div class="flex flex-col">
+  <div
+    class="text-sm bg-blue text-white p-4 rounded-t-lg rounded-br-lg rounded-bl self-start"
+  >
+    Hello, I would like to buy a car.
+  </div>
+  <div class="text-sm bg-mystic rounded-t-lg p-4 rounded-bl-lg self-end">
+    Great! when could we do that?
+  </div>
+</div>
+```
+
+## Card
+
+<div class="fade-in p-4 cursor-pointer bg-white max-w-xs w-full shadow select-none overflow-hidden mx-auto">
+  <p class="font-semibold text-lg mb-1 text-black">New Project</p>
+  <p class="text-mineshaft mb-2">
+    Create a new project from a variety of starting templates.
+  </p>
+</div>
+
+```html
+<div
+  class="fade-in p-4 cursor-pointer bg-white rounded max-w-xs w-full shadow select-none overflow-hidden mx-auto"
+>
+  <p class="font-semibold text-lg mb-1 text-black">New Project</p>
+  <p class="text-mineshaft mb-2">
+    Create a new project from a variety of starting templates.
+  </p>
+</div>
+```
+
+## Flexbox
+
+<div class="flex bg-mystic">
+  <div class="text-mineshaft text-center bg-white px-4 py-2 m-2">1</div>
+  <div class="flex-1 text-mineshaft text-center bg-white px-4 py-2 m-2">2</div>
+  <div class="text-mineshaft text-center bg-white px-4 py-2 m-2">3</div>
+</div>
+
+```html
+<div class="flex">
+  <div class="...">1</div>
+  <div class="flex-1 ...">2</div>
+  <div class="...">3</div>
+</div>
+```

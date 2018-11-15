@@ -1,16 +1,21 @@
 {
-  "name": "parcel-sandbox",
+  "name": "podium-css",
   "version": "1.0.0",
-  "description": "Simple Parcel Sandbox",
+  "description": "Podium CSS",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "docz dev",
+    "build": "npm run build-tailwind && docz build",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "build-tailwind": "./node_modules/.bin/tailwind build src/main.css --config tailwind.js -o src/output.css"
   },
   "dependencies": {
-    "tailwindcss": "0.6.6"
+    "docz": "^0.12.9",
+    "tailwindcss": "^0.6.6"
   },
   "devDependencies": {
+    "docz-plugin-css": "^0.11.0",
     "parcel-bundler": "^1.6.1"
   }
 }

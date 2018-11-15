@@ -1,0 +1,55 @@
+{
+  "config": {
+    "title": "Podium CSS",
+    "description": "Documentation of Podium CSS",
+    "themeConfig": {},
+    "menu": [],
+    "ordering": "descending",
+    "version": "1.0.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": true,
+    "plugins": [
+      {}
+    ]
+  },
+  "entries": {
+    "src/catalog.mdx": {
+      "name": "Catalog",
+      "id": "f2a400138f5d80cfa36f204c20ba5dd3",
+      "filepath": "src/catalog.mdx",
+      "link": null,
+      "slug": "src-catalog",
+      "route": "/src-catalog",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "intro",
+          "value": "Intro"
+        },
+        {
+          "depth": 2,
+          "slug": "buttons",
+          "value": "Buttons"
+        },
+        {
+          "depth": 2,
+          "slug": "message-bubbles",
+          "value": "Message Bubbles"
+        },
+        {
+          "depth": 2,
+          "slug": "card",
+          "value": "Card"
+        },
+        {
+          "depth": 2,
+          "slug": "flexbox",
+          "value": "Flexbox"
+        }
+      ]
+    }
+  }
+}
