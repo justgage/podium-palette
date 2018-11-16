@@ -1,0 +1,77 @@
+---
+name: What is it?
+order: 100
+---
+
+## So What's Podium CSS?
+
+Podium CSS is a **Utility First css library** built on [Tailwind](https://tailwindcss.com).
+
+Basically this means it provides a **lot of little css classes** that you can conbine to create anything.
+
+For instance:
+
+```html
+<div class="shadow-md bg-blue text-white p-5">A simple thing</div>
+```
+
+Creates:
+
+Let's break that down...
+
+- `shadow-md`: Adds a shadow, there's many of these.
+- `bg-blue`: Makes the background color set to Podium's blue color.
+- `text-white`: Sets the text color to white
+- `p-5`: Sets the padding all around to the 5th step in the scale. This one ends up being `16px`.
+
+## Long classnames
+
+There's a couple of ways to combat when `className` gets too long in your HTML.
+
+### 1. Abstract it into a component
+
+The easiest way is use React (or any templating language) to abstract it into a Component.
+
+import { Playground } from 'docz';
+
+```jsx
+const BlueBox = ({children}) => (
+  <div class="shadow-md bg-blue text-white p-5">
+    {children}
+  </div>
+  );
+
+const Main = <BlueBox>A simple thing<BlueBox>
+```
+
+This is nice because it doesn't bloat the CSS stylesheet, yet makes the HTML nicer.
+
+### 2. Composite Classnames
+
+But say you _reeeely_ want to have a `blue-box` class, maybe it's used it all over.
+
+In Tailwind to create composite class (on class built out of others) you can do this:
+
+<span class="bg-mystic text-red py-3 px-4 rounded text-white my-5 text-center">
+  ⚠️ Warning: Don't do this too much because it can bloat the CSS bundle
+</span>
+
+```css
+.blue-box {
+  @apply shadow-md bg-blue text-white p-5;
+}
+```
+
+Then you would be able to just do:
+
+```html
+<div class="blue-box">...</div>
+```
+
+While it might be tempting to do this all over the place
+every time you create a new class it increases your bundle size.
+Also it might just be **premature abstraction.**
+
+You may _think_ that you know blue boxes, only to find out in many cases
+you want a different padding on them, or they aren't always blue
+or some don't need a shadow, etc...

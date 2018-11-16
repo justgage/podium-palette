@@ -1,10 +1,12 @@
 ---
-name: Intro
+name: Why Podium CSS
 route: /
-order: 1
+order: 99999999
 ---
 
-# Podium CSS
+import './output.css';
+
+# Why Podium CSS
 
 This is the new Podium CSS. It's a CSS first UI library.
 
@@ -14,7 +16,9 @@ The main reason is **_because everything can't be styled components_**!
 
 There's a couple of reasons why this is, let's look at some examples.
 
-### Webchat
+## Everything can't use Styled Components
+
+#### Webchat
 
 Webchat can't use styled components because it has to be renderd
 inside an inline-iframe. The inline iframe is controlled from the
@@ -22,7 +26,14 @@ inside an inline-iframe. The inline iframe is controlled from the
 `<style>` tag in the head of our customer's page instead of inside
 the iframe. [Which at the time was not configurable.](https://github.com/styled-components/styled-components/issues/659)
 
-### Dashboard Frontend & Stormcrow (login page)
+#### Third-Party apps building inside of Messenger
+
+When people are building inside of messenger we aren't going to dictate
+they can only use React, they might use sever rendered HTML or Angular,
+or Ember (heaven help them). Providing an easy library where they can create
+anything but still make it easy for them to make things look on Brand makes sense.
+
+#### Dashboard Frontend & Stormcrow (login page)
 
 Dashboard Frontend is built in Angular, Stormcrow's frontend is
 built in plain JS, no React. This means they can't use Podium UI.
@@ -30,62 +41,16 @@ You can argue that they should be rewritten in React, which is
 probably true, however it doesn't seem to be Podium's priority right
 now.
 
-### Podium.com
+#### Podium.com
 
-Podium.com is written in Wordpress. As such often it's styles differ
+Podium.com is written in Wordpress. Because of this it's styles tend to differ
 from our app's styles. It couldn't use React without causing the page
 to load slower.
 
-### Third-Party apps building inside of Messenger
+## Some other reasons
 
-When people are building inside of messenger we aren't going to dictate
-they can only use React, they might use sever rendered HTML or Angular,
-or Ember (heaven help them). Providing an easy library where they can create
-anything but still make it easy for them to make things look on Brand makes sense.
+Other reasons include:
 
-## So What's Podium CSS?
-
-Podium CSS is a **Utility First css library** built on [Tailwind](https://tailwindcss.com). Basically
-this means it provides a lot of little css classes that you can conbine to create anything.
-
-For instance:
-
-```html
-<div class="shadow-md bg-blue text-white p-5">A simple thing</div>
-```
-
-Creates:
-
-<div class="shadow-md bg-blue text-white p-5">A simple thing</div>
-
-Let's break that down...
-
-- `shadow-md`: Adds a shadow, there's many of these.
-- `bg-blue`: Makes the background color set to Podium's blue color.
-- `text-white`: Sets the text color to white
-- `p-5`: Sets the padding all around to the 5th step in the scale. This one ends up being `16px`.
-
-But Why do this instead of `blue-box`, Or something like that? Well we can still do that. In tailwind
-to create higher level classes you can do this:
-
-```css
-.blue-box {
-  @apply shadow-md bg-blue text-white p-5;
-}
-```
-
-Then you would be able to just do:
-
-```html
-<div class="blue-box">...</div>
-```
-
-**_However_** this should be done **very sparingly**!
-
-While it might be tempting to do this all over the place
-every time you create a new class it increases your bundle size.
-Also it might just be **premature abstraction.**
-
-You may _think_ that you know blue boxes, only to find out in many cases
-you want a different padding on them, or they aren't always blue
-or some don't need a shadow, etc...
+- CSS classes are easier to compose together than components
+- Using CSS files means potential to cache the CSS independently from the JavaScript
+- If you use the CDN version of Podium CSS
