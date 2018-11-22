@@ -42,41 +42,38 @@ View the full documentation at https://tailwindcss.com.
 */
 
 const colors = {
-  transparent: 'transparent',
-  green: '#22d85d',
+  armyGreen: '#7b7257',
   bearLake: '#179be5',
-  // --- old colors, don't use ----
-  // goldfish: '#ffc636',
-  // dusk: '#e66a5c',
-  white: '#ffffff',
   black: '#000000',
-  mineShaft: '#333333',
-  jumbo: '#878787',
-  iron: '#cccccc',
-  mystic: '#e4e9f0',
-  whiteSmoke: '#f5f5f7',
-  whiteSmokeDark: '#eaeaee',
-  fbMessenger: '#0084ff',
   blue: '#4c76e0',
   blueDark: '#2353cc',
+  fbMessenger: '#0084ff',
+  goldfish: '#ffc636',
+  green: '#22d85d',
+  iron: '#cccccc',
+  jumbo: '#878787',
+  lightSteel: '#adb6be',
+  lightTan: '#f4f2ef',
+  mineShaft: '#333333',
+  mystic: '#e4e9f0',
+  palePink: '#f6c5c4',
   red: '#e73e51',
-  // --- less commonly used colors ---
-  // armyGreen: '#7b7257',
-  steel: '#778692'
-  // tan: '#e9e5e0',
-  // lightSteel: '#adb6be',
-  // lightTan: '#f4f2ef',
-  // palePink: '#f6c5c4',
+  steel: '#778692',
+  tan: '#e9e5e0',
+  transparent: 'transparent',
+  white: '#ffffff',
+  whiteSmoke: '#f5f5f7',
+  whiteSmokeDark: '#eaeaee'
 };
 
 const steps = {
   '1': '1px',
-  '2': '0.25rem',
-  '3': '0.5rem',
-  '4': '0.75rem',
-  '5': '1rem',
-  '6': '1.25rem',
-  '7': '1.5rem',
+  '2': '4px',
+  '3': '8px',
+  '4': '10px',
+  '5': '16px',
+  '6': '24px',
+  '7': '28px',
   '8': '2rem',
   '9': '2.5rem',
   '10': '3rem',
@@ -123,7 +120,10 @@ module.exports = {
   */
 
   screens: {
-    ns: '576px'
+    ns: '576px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px'
   },
 
   /*
