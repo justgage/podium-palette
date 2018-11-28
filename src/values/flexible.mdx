@@ -1,0 +1,44 @@
+---
+name: Flexible
+menu: Values
+---
+
+# Flexible
+
+> Podium CSS should be flexible enough to implement 95%
+> of designs without creating things from scratch or
+> writing custom CSS
+
+## Riffing on old designs
+
+> Riff: an ostinato phrase (as in jazz) typically supporting a solo improvisation
+> ~ [Merriam-Webster Dictionary](https://www.merriam-webster.com/dictionary/riff)
+
+The problem with tranditional components is that you have one
+`<Banner/>` or one `<Button />` and there's not great way to make
+your own without copy-and-pasting the existing one or starting
+from scratch, or perhaps worst, CSS overrides (`!important` YOLO!).
+
+**_However this is a natural and fine process of design!_** Not everything
+has to be 100% uniform and often falls on it's face when you try to make
+it that way. Every page and problem is different and needs to be treated
+with care. However, **it shouldn't be completely lawless either**.
+
+Podium CSS provides low-level classes that help you do just that.
+
+For instance while you can use the `btn` classes like this (see [Button component](components-buttons))
+
+import { Playground } from 'docz';
+import '../output.css';
+
+<Playground>
+  <button className="btn btn--primary px-5 py-4 mr-4">Primary Button</button>
+</Playground>
+
+It's just as easy to make your own that's `tan` even though that didn't exist previously.
+
+<Playground>
+  <button className="btn bg-tan hover:bg-red hover:text-white px-5 py-4 mr-4">
+    Marketing Button
+  </button>
+</Playground>

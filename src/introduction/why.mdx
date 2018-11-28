@@ -1,0 +1,77 @@
+---
+name: Why
+menu: Introduction
+route: /
+order: 999999999999999
+---
+
+import '../output.css';
+
+# Why
+
+This is the new Podium CSS. It's a `class` first UI library.
+
+## What's `class` first?
+
+This means we create CSS classes as a first class citisian _then_ React Components that
+combine these classes for greater convienence.
+
+First off we would create a bunch of classes
+
+```css
+/* NOTE: these aren't the actual implementations, just an example */
+
+.rounded {
+  border-radius: 3px;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.text-white {
+  color: white;
+}
+
+.shadow-md {
+  box-shadow: /* whatever */ ;
+}
+
+.p-4 {
+  padding: '32px';
+}
+```
+
+Then we compose them in HTML
+
+```html
+<div class="rounded bg-red text-white shadow-md p-4">
+  Warning! This could be much better!
+</div>
+```
+
+Which looks like this:
+
+<div class="rounded bg-red text-white shadow-md p-4">
+  Warning! This could be much better!
+</div>
+
+Then if we want it to be reusable we wrap it up in a compnent:
+
+```js
+const ErrorBanner = ({ children }) => (
+  <div className="rounded bg-red text-white shadow-md p-4">{children}</div>
+);
+
+// Later use it
+<ErrorBanner> Warning! This could be much better! </ErrorBanner>;
+```
+
+## Why "`class` first"?
+
+This is covered extensively in the [Values](/values-universal) section but at a high level:
+
+1. It's Universal
+2. It's Flexible
+3. It's Consistent
+4. It's Easy

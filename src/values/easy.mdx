@@ -1,0 +1,54 @@
+---
+name: Easy
+menu: Values
+---
+
+# Easy
+
+> It should make doing the right thing easier than doing the wrong thing.
+
+Also,
+
+> Convinience Sells.
+
+## ClassNames are far easier
+
+What do you have to do to create a Styled Component?
+
+1. Realize you need styling added to this div
+2. Go into the `...StyledComponents.js` file, or create it
+3. Think of a class name (variable name?) export it
+4. Write the Custom CSS
+5. Realize you need one of the Podium colors.
+6. Look around in other files to figure out the `import` statement should look like
+7. Pull in the colors you need and interoplate them into the css block
+8. Go back over the React Component and import the Styled Component you wrote
+9. Switch out your div for the styled Component
+10. Check the browser to see if it looks good, make tweeks till it looks like the design.
+11. Repeat.
+
+**What about with Podium CSS?**
+
+1. Realize you need styling added to this div
+2. Write `className=...` and add your styles (note: colors are already availible).
+3. Maybe look up these docs or the [Table of Styles](table-of-styles) to see what's availible.
+4. Check the browser to see if it looks good
+5. Repeat.
+
+## Benefits
+
+Namely the benefits you gain are:
+
+1. Don't have to `import` anything to use the design system.
+2. Don't have to cross-reference a CSS file and a JS file
+3. Using the design system in the browser now possible.
+
+## Designing in the Browser
+
+Because of the nature CSS-in-JS it wasn't really possible to design in the browser _using the design system_.
+Now it's easy:
+
+import '../output.css';
+import designGif from '../design-in-browser.gif';
+
+<img class="bg-black w-full block shadow" src={designGif} />
