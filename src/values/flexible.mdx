@@ -14,10 +14,13 @@ menu: Values
 > Riff: an ostinato phrase (as in jazz) typically supporting a solo improvisation
 > ~ [Merriam-Webster Dictionary](https://www.merriam-webster.com/dictionary/riff)
 
-The problem with tranditional components is that you have one
-`<Banner/>` or one `<Button />` and there's not great way to make
-your own without copy-and-pasting the existing one or starting
-from scratch, or perhaps worst, CSS overrides (`!important` YOLO!).
+The problem with traditional components is that you have one
+`<Banner/>` and there's not great way customize it without
+hacky solutions such as:
+
+1. CSS overrides ([#specifity-war](https://stuffandnonsense.co.uk/archives/css_specificity_wars.html))
+2. copy-and-pasting the existing one
+3. starting from scratch
 
 **_However this is a natural and fine process of design!_** Not everything
 has to be 100% uniform and often falls on it's face when you try to make
@@ -32,13 +35,65 @@ import { Playground } from 'docz';
 import '../output.css';
 
 <Playground>
-  <button className="btn btn--primary px-5 py-4 mr-4">Primary Button</button>
+  <button className="btn btn--primary px-5 py-4">Primary Button</button>
 </Playground>
 
-It's just as easy to make your own that's `tan` even though that didn't exist previously.
+It's just as easy to make your own that's tan with a red hover _even though that didn't exist previously._
 
 <Playground>
-  <button className="btn bg-tan hover:bg-red hover:text-white px-5 py-4 mr-4">
+  <button className="btn bg-tan hover:bg-red hover:text-white px-5 py-4">
     Marketing Button
   </button>
 </Playground>
+
+And throw on some `uppercase` to make it even bolder.
+
+<Playground>
+  <button className="btn bg-tan hover:bg-red hover:text-white px-5 py-4 uppercase">
+    Marketing Button
+  </button>
+</Playground>
+
+How about some smaller text? (`text-sm`)
+
+<Playground>
+  <button className="btn bg-tan hover:bg-red hover:text-white px-5 py-4 uppercase text-sm">
+    Marketing Button
+  </button>
+</Playground>
+
+Now I need it to be in the center of the screen.
+
+<Playground>
+  <button className="btn bg-tan hover:bg-red hover:text-white px-5 py-4 uppercase text-sm mx-auto block">
+    Marketing Button
+  </button>
+</Playground>
+
+Maybe you feel that the classes are getting a little too long, however
+you can always pull them off into a component or just break them onto
+multiple lines to make it easier to read.
+
+```jsx
+<button
+  className={[
+    'btn',
+    'bg-tan',
+    'hover:bg-red',
+    'hover:text-white',
+    'px-5',
+    'py-4',
+    'uppercase',
+    'text-sm',
+    'mx-auto',
+    'block'
+  ].join(' ')}
+>
+  Marketing Button
+</button>
+```
+
+## Easy to customize
+
+Also it's flexible because it's easy to customize! If you wanted to add
+a new color, spacing, font, etc... you would just add it to `tailwind.js`!

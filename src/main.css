@@ -151,3 +151,10 @@
 .chat-right {
   @apply rounded-t-lg rounded-bl-lg rounded-br;
 }
+
+/* An 8 px grid background for debugging */
+.grid-8:hover {
+  background-size: 8px 8px;
+  background-image: linear-gradient(to right, lightgray 1px, transparent 1px),
+    linear-gradient(to bottom, lightgray 1px, transparent 1px);
+}

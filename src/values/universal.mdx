@@ -3,6 +3,8 @@ name: Universal
 menu: Values
 ---
 
+import '../output.css';
+
 # Universal
 
 > Podium CSS should be able to be used by everyone, , no matter where they are
@@ -18,6 +20,10 @@ of your build pipeline.
 
 ### Webchat
 
+import webchat from './webchat.png';
+
+<img class="bg-black w-full block" src={webchat} />
+
 Webchat can't use styled components because it has to be renderd
 inside an inline-iframe. The inline iframe is controlled from the
 **outside** which _means_ that Styled Components trys to put the
@@ -25,6 +31,10 @@ inside an inline-iframe. The inline iframe is controlled from the
 the iframe. [Which at the time was not configurable.](https://github.com/styled-components/styled-components/issues/659)
 
 ### Third-Party apps building inside of Messenger
+
+import thirdParty from './3rd-party.png';
+
+<img class="bg-black w-full block shadow" src={thirdParty} />
 
 When people are building inside of messenger we aren't going to dictate
 they can only use React, they might use sever rendered HTML or Angular,

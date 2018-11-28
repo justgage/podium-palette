@@ -1,0 +1,62 @@
+---
+name: Consistent
+menu: Values
+---
+
+# Consistent
+
+import { Playground } from 'docz';
+import '../output.css';
+
+> Podium CSS will be consistent to itself. Almost
+> anything built with it will look on brand.
+
+The main way we accomplish this is by having **a limited
+amount of CSS classes you can use.** As opposed to when you
+you're writing custom CSS it's **easiest to hard-code random
+pixel values and colors.**
+
+For instance if you do `text-pink` it will fail to change the text color.
+
+<Playground>
+  <div className="text-pink">Not pink</div>
+  <div style={{ color: 'pink' }}>Non-standard pink</div>
+</Playground>
+
+The other way is by translating overly simple colors like `red` into
+Podium specific ones:
+
+<Playground>
+  <div className="text-red">Podium red</div>
+  <div style={{ color: 'red' }}>Non-standard red</div>
+  <div className="text-green">Podium green</div>
+  <div style={{ color: 'green' }}>Non-standard green</div>
+  <div className="text-blue">Podium blue</div>
+  <div style={{ color: 'blue' }}>Non-standard blue</div>
+</Playground>
+
+Also having a consistent scale also makes it easier to line things up.
+
+<Playground>
+  Hover to see grid 👇🏼
+  <div className="border flex justify-between grid-8">
+    <div className="mt-10">Uses Margin on top</div>
+    <div className="pt-10">Uses Padding on top</div>
+  </div>
+</Playground>
+
+With custom CSS it's easy to have things slightly off:
+
+<Playground>
+  Hover to see grid 👇🏼
+  <style>
+    {`
+    .left-thing { margin-top: 46px; }
+    .right-thing { padding-top: 48px; }
+    `}
+  </style>
+  <div className="border flex justify-between grid-8">
+    <div className="left-thing">Uses Margin on top</div>
+    <div className="right-thing">Uses Padding on top</div>
+  </div>
+</Playground>
