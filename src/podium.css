@@ -4466,6 +4466,10 @@ table {
   transform: rotate(180deg);
 }
 
+.rotate-45 {
+  transform: rotate(45deg);
+}
+
 .rotate-90 {
   transform: rotate(90deg);
 }
@@ -4474,7 +4478,7 @@ table {
   transform: rotate(270deg);
 }
 
-.transition {
+.transition-all {
   transition: all .125s ease;
 }
 

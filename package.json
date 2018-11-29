@@ -8,7 +8,7 @@
     "build": "npm run build-tailwind && docz build",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "build-tailwind": "./node_modules/.bin/tailwind build src/main.css --config tailwind.js -o src/output.css"
+    "build-tailwind": "./node_modules/.bin/tailwind build src/main.css --config tailwind.js -o src/podium.css"
   },
   "dependencies": {
     "docz": "^0.12.9",

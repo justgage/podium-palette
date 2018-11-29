@@ -22,7 +22,7 @@ class Fullscreen extends Component {
             'fixed',
             'pin-r',
             'pin-t',
-            'transition',
+            'transition-all',
             'z-max',
             'text-black',
             'text-right',

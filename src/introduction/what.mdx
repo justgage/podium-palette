@@ -1,9 +1,10 @@
 ---
-name: What
+name: What Is Podium CSS?
 menu: Introduction
 ---
 
-import '../output.css';
+import '../podium.css';
+import { Playground } from 'docz';
 
 ## So What's Podium CSS?
 
@@ -11,11 +12,31 @@ Podium CSS is a **Utility First CSS library** built on [Tailwind](https://tailwi
 
 Basically this means it provides a **lot of little CSS classes** that you can conbine to create anything.
 
-For instance:
+```css
+/* NOTE: these aren't the actual implementations, just an example */
 
-```html
-<div class="shadow-md bg-blue text-white p-5">A simple thing</div>
+.shadow-md {
+  box-shadow: /* whatever */ ;
+}
+
+.bg-blue {
+  background-color: /* actual blue hash */ ;
+}
+
+.text-white {
+  color: white;
+}
+
+.p-5 {
+  padding: '16px';
+}
 ```
+
+Which would be then used like so:
+
+<Playground>
+  <div class="shadow-md bg-blue text-white p-5">A simple thing</div>
+</Playground>
 
 Creates:
 
@@ -24,17 +45,15 @@ Let's break that down...
 - `shadow-md`: Adds a shadow, there's many of these.
 - `bg-blue`: Makes the background color set to Podium's blue color.
 - `text-white`: Sets the text color to white
-- `p-5`: Sets the padding all around to the 5th step in the scale. This one ends up being `16px`.
+- `p-5`: Sets the padding all around to the 5th step in the scale. Which is 16px.
 
-## Long classnames
+## Long classNames
 
 There's a couple of ways to combat when `className` gets too long in your HTML.
 
 ### 1. Abstract it into a component
 
 The easiest way is use React (or any templating language) to abstract it into a Component.
-
-import { Playground } from 'docz';
 
 ```jsx
 const BlueBox = ({children}) => (
@@ -48,7 +67,7 @@ const Main = <BlueBox>A simple thing<BlueBox>
 
 This is nice because it doesn't bloat the CSS stylesheet, yet makes the HTML nicer.
 
-### 2. Composite Classnames
+### 2. Composite classNames
 
 But say you _reeeely_ want to have a `blue-box` class, maybe it's used it all over.
 

@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { theme, ThemeConfig, DocPreview } from 'docz';
-import '../../output.css';
+import '../../podium.css';
 // import { ThemeProvider } from 'emotion-theming';
 // import webfont from 'webfontloader';
 // import ReactBreakpoints from 'react-breakpoints';
@@ -26,7 +26,7 @@ const Div = className => props => {
 const Page = props => {
   return (
     <div className="Page max-w-lg mx-auto px-10 py-10 w-full">
-      <link href="output.css" rel="stylesheet" />
+      <link href="podium.css" rel="stylesheet" />
       {props.children}
     </div>
   );

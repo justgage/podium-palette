@@ -24,5 +24,6 @@ export default {
     css({
       preprocessor: 'postcss'
     })
-  ]
+  ],
+  dest: 'build'
 };
