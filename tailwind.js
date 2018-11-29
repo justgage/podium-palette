@@ -41,30 +41,34 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-const colors = {
-  armyGreen: '#7b7257',
-  bearLake: '#179be5',
+const textColors = {
   black: '#000000',
   blue: '#4c76e0',
   blueDark: '#2353cc',
-  fbMessenger: '#0084ff',
-  goldfish: '#ffc636',
   green: '#22d85d',
   iron: '#cccccc',
   jumbo: '#878787',
   lightSteel: '#adb6be',
-  lightTan: '#f4f2ef',
   mineShaft: '#333333',
-  mystic: '#e4e9f0',
-  palePink: '#f6c5c4',
   red: '#e73e51',
   steel: '#778692',
-  tan: '#e9e5e0',
-  transparent: 'transparent',
-  white: '#ffffff',
-  whiteSmoke: '#f5f5f7',
-  whiteSmokeDark: '#eaeaee'
+  white: '#ffffff'
 };
+
+const colors = Object.assign({}, textColors, {
+  transparent: 'transparent',
+  fbMessenger: '#0084ff',
+  goldfish: '#ffc636',
+  palePink: '#f6c5c4',
+  whiteSmokeDark: '#eaeaee',
+  armyGreen: '#7b7257',
+  bearLake: '#179be5',
+  'black-70': 'rgba(0, 0, 0, 0.7)',
+  lightTan: '#f4f2ef',
+  whiteSmoke: '#f5f5f7',
+  mystic: '#e4e9f0',
+  tan: '#e9e5e0'
+});
 
 const steps = {
   '1': '1px',
@@ -285,7 +289,7 @@ module.exports = {
   |
   */
 
-  textColors: colors,
+  textColors: textColors,
 
   /*
   |-----------------------------------------------------------------------------

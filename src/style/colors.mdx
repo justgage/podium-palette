@@ -16,8 +16,16 @@ There's two types, ones that start with `text-` and ones that start with `bg-`.
 
 Backgrounds start with `bg-` such as `bg-blue`.
 
+import settings from '../../tailwind.js';
+console.log(settings);
+const bg = Object.entries(settings.backgroundColors);
+bg.sort(([k1, v1], [k2, v2]) => (v1 < v2 ? -1 : 1));
+const textColor = Object.entries(settings.textColors);
+textColor.sort(([k1, v1], [k2, v2]) => (v1 < v2 ? -1 : 1));
+console.log(bg);
+
 <div
-  class="p-5 rounded-lg"
+  className="p-5 rounded-lg"
   style={{
     backgroundImage:
       'linear-gradient(45deg, lightgray 25%, transparent 25%), linear-gradient(-45deg, lightgray 25%, transparent 25%), linear-gradient(45deg, transparent 75%, lightgray 75%), linear-gradient(-45deg, transparent 75%, lightgray 75%)',
@@ -25,46 +33,24 @@ Backgrounds start with `bg-` such as `bg-blue`.
     backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
   }}
 >
-  <div class="p-3 bg-white">bg-white</div>
-  <div class="p-3 bg-transparent">
-    <span class="bg-black text-white p-2 opacity-75">
-      bg-transparent (div is not visible)
-    </span>
-  </div>
-  <div class="p-3 bg-black text-white">bg-black</div>
-  <div class="p-3 bg-mineShaft text-white">bg-mineShaft</div>
-  <div class="p-3 bg-steel">bg-steel</div>
-  <div class="p-3 bg-jumbo">bg-jumbo</div>
-  <div class="p-3 bg-iron">bg-iron</div>
-  <div class="p-3 bg-whiteSmokeDark">bg-whiteSmokeDark</div>
-  <div class="p-3 bg-whiteSmoke">bg-whiteSmoke</div>
-  <div class="p-3 bg-mystic">bg-mystic</div>
-  <div class="p-3 bg-blue">bg-blue</div>
-  <div class="p-3 bg-blueDark">bg-blueDark</div>
-  <div class="p-3 bg-bearLake">bg-bearLake</div>
-  <div class="p-3 bg-fbMessenger">bg-fbMessenger</div>
-  <div class="p-3 bg-red">bg-red</div>
-  <div class="p-3 bg-green">bg-green</div>
+  {bg.map(([k, v]) => (
+    <div key={k} className={`p-3 bg-${k} ${v < '#adb6be' ? 'text-white' : ''}`}>
+      bg-{k} ({v})
+    </div>
+  ))}
 </div>
 
 ## Text Color
 
 Backgrounds start with `text-` such as `text-blue`.
 
-<div class="p-5">
-  <div class="p-3 text-white bg-black">text-white</div>
-  <div class="p-3 text-black">text-black</div>
-  <div class="p-3 text-mineShaft">text-mineShaft</div>
-  <div class="p-3 text-steel">text-steel</div>
-  <div class="p-3 text-jumbo">text-jumbo</div>
-  <div class="p-3 text-iron">text-iron</div>
-  <div class="p-3 text-whiteSmokeDark">text-whiteSmokeDark</div>
-  <div class="p-3 text-whiteSmoke">text-whiteSmoke</div>
-  <div class="p-3 text-mystic">text-mystic</div>
-  <div class="p-3 text-blue">text-blue</div>
-  <div class="p-3 text-blueDark">text-blueDark</div>
-  <div class="p-3 text-bearLake">text-bearLake</div>
-  <div class="p-3 text-fbMessenger">text-fbMessenger</div>
-  <div class="p-3 text-red">text-red</div>
-  <div class="p-3 text-green">text-green</div>
+<div className="p-5">
+  {textColor.map(([k, v]) => (
+    <div
+      key={k}
+      className={`p-3 text-${k} ${v === '#ffffff' ? 'bg-mineShaft' : ''}`}
+    >
+      text-{k} ({v})
+    </div>
+  ))}
 </div>

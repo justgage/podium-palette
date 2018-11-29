@@ -7,9 +7,9 @@ export default {
   menu: [
     'Introduction',
     'Values',
-    'Components',
     'Layout',
     'Style',
+    'Components',
     'Example',
     'Table of Styles'
   ],
