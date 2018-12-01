@@ -133,7 +133,7 @@
 }
 
 .btn--primary:hover {
-  @apply bg-blueDark;
+  @apply bg-darkBlue;
 }
 
 .btn--secondary {

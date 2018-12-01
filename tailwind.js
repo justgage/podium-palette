@@ -44,7 +44,7 @@ View the full documentation at https://tailwindcss.com.
 const textColors = {
   black: '#000000',
   blue: '#4c76e0',
-  blueDark: '#2353cc',
+  darkBlue: '#2353cc',
   green: '#22d85d',
   iron: '#cccccc',
   jumbo: '#878787',
@@ -63,6 +63,7 @@ const colors = Object.assign({}, textColors, {
   whiteSmokeDark: '#eaeaee',
   armyGreen: '#7b7257',
   bearLake: '#179be5',
+  lightBlue: '#E6F6FF',
   'black-70': 'rgba(0, 0, 0, 0.7)',
   lightTan: '#f4f2ef',
   whiteSmoke: '#f5f5f7',
