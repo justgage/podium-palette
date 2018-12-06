@@ -88,7 +88,7 @@ export default () => (
       </div>
       <button className="_location-picker flex flex-grow md:flex-no-grow items-center rounded bg-white py-4 px-5 text-blue font-bold">
         <span className="flex-grow truncate pr-5 cursor-pointer text-left">
-          Ken Garf Ford of Spain in Taronto
+          Blank's Good Car Company Of Utah
         </span>
         <svg
           className="h-5 fill-current"
@@ -267,9 +267,9 @@ export default () => (
           </div>
           <div className="">
             <h2 className="md:text-lg text-base font-semibold truncate">
-              Aimee Tran (Utah Jazz Service)
+              Amy White
             </h2>
-            <div className="-mt-3 text-sm text-steel">+1 801 209 1500</div>
+            <div className="-mt-3 text-sm text-steel">+1 801 139 1512</div>
           </div>
           <div className="flex-grow" />
           <button className="btn text-steel hover:bg-whiteSmoke px-4 py-3 mr-4 uppercase text-sm flex">
@@ -393,7 +393,7 @@ export default () => (
           <div className="font-semibold leading-tight px-3 text-2 text-center">
             Aimee Tran (Utah Jazz Service)
           </div>
-          <div className="_phone text-center mt-2">+1 801 209 1500</div>
+          <div className="_phone text-center mt-2">+1 801 123 1543</div>
         </div>
         <div className="_sidebar-actions flex flex-col">
           <div className="text-jumbo uppercase text-sm font-semibold mt-5 mx-5 mb-3">
@@ -407,7 +407,7 @@ export default () => (
                   "url('https://podium-prod.s3.amazonaws.com/avatar%2F152426%2F10bf3611-3578-4638-8bbb-4eec340e3fce%2Favatar.jpeg')"
               }}
             />
-            <span className="flex-grow text-left">Hunter Riggs</span>
+            <span className="flex-grow text-left">Hunter Wright</span>
             <svg
               className="stroke-current fill-current h-4 w-4 rotate-270"
               viewBox="0 0 512 512"
