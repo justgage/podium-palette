@@ -391,7 +391,7 @@ export default () => (
             />
           </div>
           <div className="font-semibold leading-tight px-3 text-2 text-center">
-            Aimee Tran (Utah Jazz Service)
+            Amy White
           </div>
           <div className="_phone text-center mt-2">+1 801 123 1543</div>
         </div>
