@@ -5,10 +5,10 @@
   "main": "index.html",
   "scripts": {
     "start": "docz dev",
-    "build": "npm run build-tailwind && docz build",
+    "build": "npm run build-css && docz build",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "build-tailwind": "./node_modules/.bin/tailwind build src/main.css --config tailwind.js -o src/podium.css",
+    "build-css": "./node_modules/.bin/tailwind build src/main.css --config tailwind.js -o src/podium.css",
     "deploy": "npm run build && cp build/index.html build/200.html && npx surge -d podium-css.surge.sh -p build"
   },
   "dependencies": {

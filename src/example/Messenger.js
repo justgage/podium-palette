@@ -293,10 +293,13 @@ export default () => (
           >
             http://mrmrs.cc/writing/2016/03/24/scalable-css/#this-is-a-very-long-one-for-sure
           </a>
-          <div className="chat-left text-sm bg-lightBlue p-4 self-start mb-5">
-            Hello, I would like to buy a car.
+          <div className="self-start mb-5">
+            <div className="chat-left text-sm bg-blue text-white p-4">
+              Hello, I would like to buy a car.
+            </div>
+            <div className="text-left text-sm text-jumbo">9:40 AM Oct 12</div>
           </div>
-          <div className="chat-right text-sm bg-mystic p-4 self-end mb-5 max-w-xs leading-tight">
+          <div className="chat-right text-sm bg-whiteSmoke p-4 self-end mb-5 max-w-xs leading-tight">
             Hi, Steve! Thank you for choosing Podium. Can you take 30 seconds
             and leave us a quick review? The link below makes it easy:
             <a

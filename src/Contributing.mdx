@@ -1,0 +1,131 @@
+# Contributing 🙋‍♀️
+
+import './podium.css';
+
+You want to help work on Podium-CSS? Great 👏😁! It's really easy to get
+started and you only need to know HTML, CSS and maybe a little React.
+
+## Setup
+
+1. Clone the Repo down to your computer.
+2. `npm install` the dependencies (if you don't have NPM go here: https://www.npmjs.com/get-npm or install through brew)
+3. `npm start` should start the project, it'll usually run on 3001, or whatever port is available.
+
+## Writing some documentation
+
+> Lots of more documentation at the [docz website](https://docz.site/introduction).
+
+All the files in this are written in MDX which is a Markdown/JSX mix. Meaning you
+can write Markdown then intermingle React code without having to switch for instance:
+
+```md
+### A cool button
+
+<button className="bg-red rounded text-white p-3">Example</button>
+```
+
+Would create:
+
+---
+
+### A cool button
+
+<button className="bg-red rounded text-white p-3">Example</button>
+
+---
+
+If you want to wrap it in a code editor you can use the `<Playground>` tag:
+
+```
+import { Playground } from 'docz';
+
+<Playground>
+  <button className="bg-red rounded text-white p-3">Example</button>
+</Playground>;
+```
+
+import { Playground } from 'docz';
+
+<Playground>
+  <button className="bg-red rounded text-white p-3">Example</button>
+</Playground>
+
+**NOTE:** ☝️ The above code is editable! Try changing the `bg-red` to `bg-blue`!
+
+## Adding New Classes
+
+Adding classes can be done in multiple ways, just depends on the class you want to add.
+
+### Adding Spacing, Colors, Breakpoints, Shadows, or Fonts
+
+These all must be modified via the `tailwind.js` file. Don't be
+too frightened of it even though it's JS. It's basically just
+a big configuration file, and is very well documented.
+
+For example, to change a color just add one to this section:
+
+```js
+/* tailwind.js */
+
+// ... lots of file before ...
+
+const textColors = {
+  black: '#000000',
+  blue: '#4c76e0',
+  white: '#ffffff' // <-- don't forget to add a comma (,) at the end
+  // <---- Add one here, eg: `purple: "#550055"`
+};
+```
+
+After this you must run `npm build-css`
+
+### Adding Utility Classes (Animations, etc..)
+
+If you don't find a section that looks like what you want in the `tailwind.js`
+you can add a new one to the `src/main.css` file.
+
+```css
+.rotate-90 {
+  transform: rotate(90deg);
+}
+```
+
+Then run `npm run build-css`.
+
+#### Adding Higher level Classes
+
+<span class="bg-mystic text-red py-3 px-4 rounded my-5 text-center">
+  ⚠️ Warning: Don't do this too much because it can bloat the CSS bundle
+</span>
+
+Generally you should avoid doing this because it makes the CSS bundle bigger and busts the cache.
+But say you _reeeely_ want to have a `blue-box` class, maybe it's used it all over.
+
+In Tailwind to create "composite class" (on class built out of others) you can add
+it to the `main.css` file:
+
+```css
+/* main.css */
+.blue-box {
+  @apply shadow-md bg-blue text-white p-5;
+}
+```
+
+Then run `npm run build-css` and then you should be able to use it:
+
+```html
+<div class="blue-box">...</div>
+```
+
+While it might be tempting to do this all over the place
+every time you create a new class it increases your bundle size.
+Also it might just be **premature abstraction** meaning, you may _think_ that you know blue boxes, only to find out in many cases
+you want a different padding on them, or they aren't always blue
+or some don't need a shadow, etc...
+
+# Releasing to NPM
+
+Make a PR, bump the version properly then the codeship build
+should ship the new version once it's merged.
+
+NOTE: currently not implemented
