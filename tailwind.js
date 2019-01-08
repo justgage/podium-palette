@@ -726,12 +726,18 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover', 'focus'],
+    backgroundColors: [
+      'responsive',
+      'hover',
+      'focus',
+      'variant-a',
+      'variant-b'
+    ],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
     borderCollapse: [],
-    borderColors: ['responsive', 'hover', 'focus'],
+    borderColors: ['responsive', 'hover', 'focus', 'variant-a', 'variant-b'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
     borderWidths: ['responsive'],
@@ -762,13 +768,13 @@ module.exports = {
     svgStroke: [],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColors: ['responsive', 'hover', 'focus'],
+    textColors: ['responsive', 'hover', 'focus', 'variant-a', 'variant-b'],
     textSizes: ['responsive'],
     textStyle: ['responsive', 'hover', 'focus'],
     tracking: ['responsive'],
     userSelect: ['responsive'],
     verticalAlign: ['responsive'],
-    visibility: ['responsive'],
+    visibility: ['responsive', 'variant-a', 'variant-b'],
     whitespace: ['responsive'],
     width: ['responsive'],
     zIndex: ['responsive']
@@ -789,6 +795,19 @@ module.exports = {
   */
 
   plugins: [
+    function({ addVariant }) {
+      addVariant('variant-a', ({ modifySelectors }) => {
+        modifySelectors(({ className }) => {
+          return `.variant-a ${className}`;
+        });
+      });
+
+      addVariant('variant-b', ({ modifySelectors }) => {
+        modifySelectors(({ className }) => {
+          return `.variant-b ${className}`;
+        });
+      });
+    },
     require('tailwindcss/plugins/container')({
       // center: true,
       // padding: '1rem',
