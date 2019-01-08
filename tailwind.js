@@ -737,12 +737,12 @@ module.exports = {
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
     borderCollapse: [],
-    borderColors: ['responsive', 'hover', 'focus', 'variant-a', 'variant-b'],
+    borderColors: ['responsive', 'hover', 'focus'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
     borderWidths: ['responsive'],
     cursor: ['responsive'],
-    display: ['responsive'],
+    display: ['responsive', 'variant-a', 'variant-b'],
     flexbox: ['responsive'],
     float: ['responsive'],
     fonts: ['responsive'],
@@ -796,15 +796,15 @@ module.exports = {
 
   plugins: [
     function({ addVariant }) {
-      addVariant('variant-a', ({ modifySelectors }) => {
+      addVariant('variant-a', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
-          return `.variant-a ${className}`;
+          return `.variant-a .a${separator}${className}`;
         });
       });
 
-      addVariant('variant-b', ({ modifySelectors }) => {
+      addVariant('variant-b', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
-          return `.variant-b ${className}`;
+          return `.variant-b .b${separator}${className}`;
         });
       });
     },
