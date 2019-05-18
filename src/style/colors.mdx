@@ -16,11 +16,11 @@ There's two types, ones that start with `text-` and ones that start with `bg-`.
 
 Backgrounds start with `bg-` such as `bg-blue`.
 
-import settings from '../../tailwind.js';
+import settings from '../../tailwind.config.js';
 console.log(settings);
-const bg = Object.entries(settings.backgroundColors);
+const bg = Object.entries(settings.theme.colors);
 bg.sort(([k1, v1], [k2, v2]) => (v1 < v2 ? -1 : 1));
-const textColor = Object.entries(settings.textColors);
+const textColor = Object.entries(settings.theme.colors);
 textColor.sort(([k1, v1], [k2, v2]) => (v1 < v2 ? -1 : 1));
 console.log(bg);
 
