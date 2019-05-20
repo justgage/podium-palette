@@ -1,6 +1,6 @@
 {
   "name": "@podiumhq/css",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A utility-first, CSS based, design system for Podium",
   "main": "src/podium.css",
   "files": ["src/podium.css", "src/main.css", "tailwind.config.js"],
