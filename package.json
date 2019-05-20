@@ -1,8 +1,8 @@
 {
-  "name": "podium-css",
-  "version": "1.0.0",
-  "description": "Podium CSS",
-  "main": "index.html",
+  "name": "@podiumhq/css",
+  "version": "0.0.1",
+  "description": "A utility-first, CSS based, design system for Podium",
+  "main": "src/podium.css",
   "scripts": {
     "start": "docz dev",
     "build": "npm run build-css && docz build",

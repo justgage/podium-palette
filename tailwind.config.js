@@ -29,6 +29,13 @@ module.exports = {
     borderColor: theme => ({
       ...theme('colors')
     }),
+    borderRadius: {
+      none: '0',
+      sm: '.125rem',
+      default: '.25rem',
+      lg: '1.5rem',
+      full: '9999px'
+    },
     extend: {
       borderWidth: {
         default: '1px'
