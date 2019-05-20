@@ -4643,6 +4643,7 @@
 }
 
 .btn {
+  border-width: 0;
   border-radius: 0.125rem;
   transition: all 0.125s ease;
   font-weight: 600;

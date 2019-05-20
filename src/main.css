@@ -121,7 +121,7 @@
 }
 
 .btn {
-  @apply rounded-sm transition-all font-semibold;
+  @apply border-0 rounded-sm transition-all font-semibold;
 }
 
 .btn:focus {
