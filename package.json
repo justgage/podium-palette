@@ -1,6 +1,6 @@
 {
   "name": "@podiumhq/css",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A utility-first, CSS based, design system for Podium",
   "main": "src/podium.css",
   "files": ["src/podium.css", "src/main.css", "tailwind.config.js"],
@@ -12,10 +12,8 @@
     "build-css": "./node_modules/.bin/tailwind build src/main.css --config tailwind.config.js -o src/podium.css && ./src/table-of-styles/refresh",
     "deploy": "npm run build && cp src/podium.css build/ && cp build/index.html build/200.html && npx surge -d podium-css.surge.sh -p build"
   },
-  "peerDependencies": {
-    "react": "^16.6.3"
-  },
   "devDependencies": {
+    "react": "^16.6.3",
     "docz": "^0.12.9",
     "docz-plugin-css": "^0.11.0",
     "parcel-bundler": "^1.6.1",
