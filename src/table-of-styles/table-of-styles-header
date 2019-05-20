@@ -12,5 +12,5 @@ Try searching for `flex` on this page.
 
 import './podium.css';
 
-<pre class="bg-mystic p-5 rounded">
+<pre class="bg-mystic p-5 rounded whitespace-pre-wrap">
   {`
