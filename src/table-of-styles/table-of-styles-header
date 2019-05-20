@@ -1,0 +1,16 @@
+---
+name: Table of Styles
+order: -100
+---
+
+# Table of Styles
+
+This is basically just a dump of all the classes in PodiumCSS. This is helpful when you're learning
+so that you can just search (`cmd-f`) for how to do something.
+
+Try searching for `flex` on this page.
+
+import './podium.css';
+
+<pre class="bg-mystic p-5 rounded">
+  {`

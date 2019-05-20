@@ -1,0 +1,6 @@
+#! /bin/bash
+
+rm src/table-of-styles.mdx
+cat src/table-of-styles/table-of-styles-header >> src/table-of-styles.mdx
+cat src/podium.css >> src/table-of-styles.mdx
+cat src/table-of-styles/table-of-styles-footer >> src/table-of-styles.mdx
