@@ -3679,6 +3679,10 @@ import './podium.css';
   box-shadow: none;
 }
 
+.shadow-focus{
+  box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+}
+
 .hover\:shadow:hover{
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
@@ -3711,6 +3715,10 @@ import './podium.css';
   box-shadow: none;
 }
 
+.hover\:shadow-focus:hover{
+  box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+}
+
 .focus\:shadow:focus{
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
@@ -3741,6 +3749,10 @@ import './podium.css';
 
 .focus\:shadow-none:focus{
   box-shadow: none;
+}
+
+.focus\:shadow-focus:focus{
+  box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
 }
 
 .fill-current{
@@ -4657,6 +4669,10 @@ import './podium.css';
   transition: all 0.125s ease;
 }
 
+/**
+* Buttons!
+*/
+
 .btn {
   border-width: 0;
   border-radius: .125rem;
@@ -4666,6 +4682,7 @@ import './podium.css';
 
 .btn:focus {
   outline: 0;
+  box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
 }
 
 .btn--primary {
@@ -4690,6 +4707,33 @@ import './podium.css';
   cursor: not-allowed;
   opacity: 0.75;
 }
+
+/** form inputs */
+
+.textbox {
+  background-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-radius: .25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  line-height: 1.5;
+}
+
+.textbox:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+}
+
+/** Chat Icons */
 
 .chat-left {
   border-top-left-radius: 1.5rem;
@@ -8317,6 +8361,10 @@ import './podium.css';
     box-shadow: none;
   }
 
+  .sm\:shadow-focus{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+  }
+
   .sm\:hover\:shadow:hover{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -8349,6 +8397,10 @@ import './podium.css';
     box-shadow: none;
   }
 
+  .sm\:hover\:shadow-focus:hover{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+  }
+
   .sm\:focus\:shadow:focus{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -8379,6 +8431,10 @@ import './podium.css';
 
   .sm\:focus\:shadow-none:focus{
     box-shadow: none;
+  }
+
+  .sm\:focus\:shadow-focus:focus{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
   }
 
   .sm\:fill-current{
@@ -12759,6 +12815,10 @@ import './podium.css';
     box-shadow: none;
   }
 
+  .md\:shadow-focus{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+  }
+
   .md\:hover\:shadow:hover{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -12791,6 +12851,10 @@ import './podium.css';
     box-shadow: none;
   }
 
+  .md\:hover\:shadow-focus:hover{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+  }
+
   .md\:focus\:shadow:focus{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -12821,6 +12885,10 @@ import './podium.css';
 
   .md\:focus\:shadow-none:focus{
     box-shadow: none;
+  }
+
+  .md\:focus\:shadow-focus:focus{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
   }
 
   .md\:fill-current{
@@ -17201,6 +17269,10 @@ import './podium.css';
     box-shadow: none;
   }
 
+  .lg\:shadow-focus{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+  }
+
   .lg\:hover\:shadow:hover{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -17233,6 +17305,10 @@ import './podium.css';
     box-shadow: none;
   }
 
+  .lg\:hover\:shadow-focus:hover{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+  }
+
   .lg\:focus\:shadow:focus{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -17263,6 +17339,10 @@ import './podium.css';
 
   .lg\:focus\:shadow-none:focus{
     box-shadow: none;
+  }
+
+  .lg\:focus\:shadow-focus:focus{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
   }
 
   .lg\:fill-current{
@@ -21643,6 +21723,10 @@ import './podium.css';
     box-shadow: none;
   }
 
+  .xl\:shadow-focus{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+  }
+
   .xl\:hover\:shadow:hover{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -21675,6 +21759,10 @@ import './podium.css';
     box-shadow: none;
   }
 
+  .xl\:hover\:shadow-focus:hover{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
+  }
+
   .xl\:focus\:shadow:focus{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
@@ -21705,6 +21793,10 @@ import './podium.css';
 
   .xl\:focus\:shadow-none:focus{
     box-shadow: none;
+  }
+
+  .xl\:focus\:shadow-focus:focus{
+    box-shadow: 0 0 0 3px rgba(76,118,224, 0.5) ;
   }
 
   .xl\:fill-current{

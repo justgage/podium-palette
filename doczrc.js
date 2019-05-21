@@ -7,10 +7,9 @@ export default {
   menu: [
     'Introduction',
     'Values',
-    'Layout',
-    'Style',
+    'Docs',
     'Components',
-    'Example',
+    'Examples',
     'Table of Styles'
   ],
   src: './src',

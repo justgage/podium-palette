@@ -36,7 +36,11 @@ module.exports = {
       lg: '1.5rem',
       full: '9999px'
     },
+    // Extend section will allow you to add a single value to the Tailwind defaults
     extend: {
+      boxShadow: {
+        focus: '0 0 0 3px rgba(76,118,224, 0.5) '
+      },
       borderWidth: {
         default: '1px'
       },

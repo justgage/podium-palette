@@ -1,3 +1,8 @@
+---
+name: Contributing
+menu: Extras
+---
+
 # Contributing 🙋‍♀️
 
 import './podium.css';
@@ -21,7 +26,7 @@ can write Markdown then intermingle React code without having to switch for inst
 ```md
 ### A cool button
 
-<button className="bg-red rounded text-white p-3">Example</button>
+<button className="border-0 bg-red rounded text-white p-3">Example</button>
 ```
 
 Would create:
@@ -30,7 +35,7 @@ Would create:
 
 ### A cool button
 
-<button className="bg-red rounded text-white p-3">Example</button>
+<button className="border-0 bg-red rounded text-white p-3">Example</button>
 
 ---
 
@@ -40,44 +45,45 @@ If you want to wrap it in a code editor you can use the `<Playground>` tag:
 import { Playground } from 'docz';
 
 <Playground>
-  <button className="bg-red rounded text-white p-3">Example</button>
+  <button className="border-0 bg-red rounded text-white p-3">Example</button>
 </Playground>;
 ```
 
 import { Playground } from 'docz';
 
 <Playground>
-  <button className="bg-red rounded text-white p-3">Example</button>
+  <button className="border-0 bg-red rounded text-white p-3">Example</button>
 </Playground>
 
 **NOTE:** ☝️ The above code is editable! Try changing the `bg-red` to `bg-blue`!
 
 ## Adding New Classes
 
+> See official Tailwind docs on customization 👉🏻 https://tailwindcss.com/docs/configuration/#app
+
 Adding classes can be done in multiple ways, just depends on the class you want to add.
 
 ### Adding Spacing, Colors, Breakpoints, Shadows, or Fonts
 
-These all must be modified via the `tailwind.js` file. Don't be
-too frightened of it even though it's JS. It's basically just
-a big configuration file, and is very well documented.
+These all must be modified via the `tailwind.config.js` file.
 
 For example, to change a color just add one to this section:
 
 ```js
 /* tailwind.js */
 
-// ... lots of file before ...
-
-const textColors = {
-  black: '#000000',
-  blue: '#4c76e0',
-  white: '#ffffff' // <-- don't forget to add a comma (,) at the end
-  // <---- Add one here, eg: `purple: "#550055"`
-};
+module.exports = {
+  theme: {
+    colors: {
+      black: '#000000',
+      blue: '#4c76e0',
+      darkBlue: '#2353cc',
+      // Add yours here
+      purple: '#558',
+  // ...
 ```
 
-After this you must run `npm build-css`
+After this you must run `npm build-css` and try it out!
 
 ### Adding Utility Classes (Animations, etc..)
 
@@ -125,7 +131,4 @@ or some don't need a shadow, etc...
 
 # Releasing to NPM
 
-Make a PR, bump the version properly then the codeship build
-should ship the new version once it's merged.
-
-NOTE: currently not implemented
+Currently we do `npm publish` locally. In the future it will auto-publish.

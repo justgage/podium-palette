@@ -120,12 +120,16 @@
   transition: all 0.125s ease;
 }
 
+/**
+* Buttons!
+*/
+
 .btn {
   @apply border-0 rounded-sm transition-all font-semibold;
 }
 
 .btn:focus {
-  @apply outline-none;
+  @apply outline-none shadow-focus;
 }
 
 .btn--primary {
@@ -147,6 +151,18 @@
 .btn--disabled {
   @apply cursor-not-allowed opacity-75;
 }
+
+/** form inputs */
+
+.textbox {
+  @apply bg-white border border-solid border-iron rounded py-2 px-4 block w-full appearance-none leading-normal;
+}
+
+.textbox:focus {
+  @apply outline-none shadow-focus;
+}
+
+/** Chat Icons */
 
 .chat-left {
   @apply rounded-t-lg rounded-br-lg rounded-bl;
