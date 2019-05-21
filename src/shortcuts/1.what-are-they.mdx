@@ -1,0 +1,56 @@
+---
+name: What Are They?
+menu: Shortcuts
+---
+
+# What Are Shortcuts?
+
+Shortcuts could in some ways be thought of "components" but we decided to call them Shortcuts because
+all they really do is make it so that you have to type less utility classes.
+
+For the following two are equivalent:
+
+import { Playground } from 'docz';
+import '../podium.css';
+
+<Playground>
+  <button
+    className={`
+    border-0 rounded-sm transition-all font-semibold
+    bg-blue text-white hover\:bg-darkBlue
+    focus\:outline-none focus\:shadow-focus
+    px-5 py-4 mr-4`}
+  >
+    Without Shortcuts
+  </button>
+  <button className="btn btn--primary px-5 py-4 mr-4">With Shortcuts</button>
+</Playground>
+
+However it's quite obvious that the latter is better than the first.
+
+# When to use Shortcuts?
+
+Using Shortcuts isn't without cost though. The primary cost is that they
+cause the compiled stylesheet is bloated with duplicated styles but there
+is also another, they are less obvious what exact styles they are applying.
+With utility classes, you know exactly what CSS is being styled by just looking
+at the names, this example for instance:
+
+<Playground>
+  <div class="bg-white shadow-md h-64 p-4">
+    <span className="self-end">This should be at the end</span>
+    <span className="self-center">I should be in the center</span>
+    <span className="self-start">I should be at the start</span>
+  </div>
+</Playground>
+
+It's plain to see that the reason the flexbox utilities aren't working is because
+the parent doesn't have `flex` on it. Try adding it!
+
+This wouldn't be as obvious if the root component had the class `card` or something.
+
+I would use these rules when you try to figure out if it's a good idea, ask yourself:
+
+> Have I used this exact combination of classes more then 10 times in real production code?
+
+For more info on this topic see tailwind's guides: https://tailwindcss.com/docs/extracting-components

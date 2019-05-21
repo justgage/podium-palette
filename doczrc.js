@@ -8,7 +8,7 @@ export default {
     'Introduction',
     'Values',
     'Docs',
-    'Components',
+    'Shortcuts',
     'Examples',
     'Table of Styles'
   ],
