@@ -22,7 +22,7 @@ of your build pipeline.
 
 import webchat from './webchat.png';
 
-<img class="bg-black w-full block" src={webchat} />
+<img className="bg-black w-full block" src={webchat} />
 
 Webchat can't use styled components because it has to be rendered
 inside an inline-iframe. The inline iframe is controlled from the
@@ -34,7 +34,7 @@ the iframe. [Which at the time was not configurable.](https://github.com/styled-
 
 import thirdParty from './3rd-party.png';
 
-<img class="bg-black w-full block shadow" src={thirdParty} />
+<img className="bg-black w-full block shadow" src={thirdParty} />
 
 When people are building inside of messenger we aren't going to dictate
 they can only use React, they might use sever rendered HTML or Angular,

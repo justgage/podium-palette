@@ -35,7 +35,7 @@ Basically this means it provides a **lot of little CSS classes** that you can co
 Which would be then used like so:
 
 <Playground>
-  <div class="shadow-md bg-blue text-white p-5">A simple thing</div>
+  <div className="shadow-md bg-blue text-white p-5">A simple thing</div>
 </Playground>
 
 Creates:
@@ -57,7 +57,7 @@ The easiest way is use React (or any templating language) to abstract it into a 
 
 ```jsx
 const BlueBox = ({children}) => (
-  <div class="shadow-md bg-blue text-white p-5">
+  <div className="shadow-md bg-blue text-white p-5">
     {children}
   </div>
   );
@@ -73,7 +73,7 @@ But say you _reeeely_ want to have a `blue-box` class, maybe it's used it all ov
 
 In Tailwind to create composite class (on class built out of others) you can do this:
 
-<span class="bg-mystic text-red py-3 px-4 rounded my-5 text-center">
+<span className="bg-mystic text-red py-3 px-4 rounded my-5 text-center">
   ⚠️ Warning: Don't do this too much because it can bloat the CSS bundle
 </span>
 
@@ -86,7 +86,7 @@ In Tailwind to create composite class (on class built out of others) you can do 
 Then you would be able to just do:
 
 ```html
-<div class="blue-box">...</div>
+<div className="blue-box">...</div>
 ```
 
 While it might be tempting to do this all over the place

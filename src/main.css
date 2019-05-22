@@ -1,15 +1,12 @@
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
  */
-@tailwind preflight;
+@tailwind base;
 
 /**
-   * This injects any component classes registered by plugins.
-   */
+  * This injects any component classes registered by plugins.
+  */
 @tailwind components;
 
 /**
@@ -73,7 +70,7 @@
   }
 }
 
-@keyframes spin {
+@keyframes spinAnimation {
   0% {
     transform: rotateZ(90deg);
   }
@@ -117,8 +114,8 @@
 }
 
 .spin {
-  animation: 1.125s cubic-bezier(0.5, 0.1, 0.5, 0.9) 0.46875s infinite
-    spinAnimation;
+  animation: spinAnimation 1.125s cubic-bezier(0.5, 0.1, 0.5, 0.9) 0.46875s
+    infinite;
 }
 
 .rotate-180 {

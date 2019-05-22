@@ -18,19 +18,19 @@ If you aren't familiar with flexbox checkout the [awesome guide by CSS tricks](h
 
 By default flexbox puts things in a row. Add `.flex` to the parent.
 
-<div class="flex bg-mystic">
-  <div class="text-mineshaft text-center bg-white px-4 py-2 m-2">1</div>
-  <div class="flex-grow text-mineshaft text-center bg-white px-4 py-2 m-2">
+<div className="flex bg-mystic">
+  <div className="text-mineshaft text-center bg-white px-4 py-2 m-2">1</div>
+  <div className="flex-grow text-mineshaft text-center bg-white px-4 py-2 m-2">
     2 (.flex-grow)
   </div>
-  <div class="text-mineshaft text-center bg-white px-4 py-2 m-2">3</div>
+  <div className="text-mineshaft text-center bg-white px-4 py-2 m-2">3</div>
 </div>
 
 ```html
-<div class="flex ...">
-  <div class="...">1</div>
-  <div class="flex-grow ...">2</div>
-  <div class="...">3</div>
+<div className="flex ...">
+  <div className="...">1</div>
+  <div className="flex-grow ...">2</div>
+  <div className="...">3</div>
 </div>
 ```
 
@@ -39,18 +39,18 @@ By default flexbox puts things in a row. Add `.flex` to the parent.
 To change flex direciton add `flex-col` to the parent element.
 
 <Playground>
-  <div class="flex flex-col bg-mystic">
-    <div class="text-mineshaft text-center bg-white py-2 m-2">1</div>
-    <div class="flex-1 text-mineshaft text-center bg-white py-2 m-2">2</div>
-    <div class="text-mineshaft text-center bg-white py-2 m-2">3</div>
+  <div className="flex flex-col bg-mystic">
+    <div className="text-mineshaft text-center bg-white py-2 m-2">1</div>
+    <div className="flex-1 text-mineshaft text-center bg-white py-2 m-2">2</div>
+    <div className="text-mineshaft text-center bg-white py-2 m-2">3</div>
   </div>
 </Playground>
 
 ```html
-<div class="flex flex-col ...">
-  <div class="...">1</div>
-  <div class="...">2</div>
-  <div class="...">3</div>
+<div className="flex flex-col ...">
+  <div className="...">1</div>
+  <div className="...">2</div>
+  <div className="...">3</div>
 </div>
 ```
 
@@ -59,10 +59,10 @@ To change flex direciton add `flex-col` to the parent element.
 To align something to a center something use `items-center` and `justify-center`.
 
 <Playground>
-  <div class="flex flex-col h-15 w-15 items-center justify-center bg-mystic">
-    <div class="text-mineshaft text-center bg-white px-5 m-2">1</div>
-    <div class="text-mineshaft text-center bg-white px-5 m-2">2</div>
-    <div class="text-mineshaft text-center bg-white px-5 m-2">3</div>
+  <div className="flex flex-col h-15 w-15 items-center justify-center bg-mystic">
+    <div className="text-mineshaft text-center bg-white px-5 m-2">1</div>
+    <div className="text-mineshaft text-center bg-white px-5 m-2">2</div>
+    <div className="text-mineshaft text-center bg-white px-5 m-2">3</div>
   </div>
 </Playground>
 
@@ -74,22 +74,22 @@ Sometimes things get too squished, so you need to add `.flex-no-shrink` on them.
 
 <Playground>
   Default behavior doesn't listen to width & height of "AF" ciricle.
-  <div class="flex w-15 bg-mystic items-center mb-5">
-    <div class="text-mineshaft text-center bg-white px-4 py-2 m-2">1</div>
-    <div class="flex-grow text-mineshaft text-center bg-white px-4 py-2 m-2">
+  <div className="flex w-15 bg-mystic items-center mb-5">
+    <div className="text-mineshaft text-center bg-white px-4 py-2 m-2">1</div>
+    <div className="flex-grow text-mineshaft text-center bg-white px-4 py-2 m-2">
       I'm too fat and squishing the circle on the right
     </div>
-    <div class="text-mineshaft text-center bg-white px-4 py-2 m-2 rounded-full w-11 h-11">
+    <div className="text-mineshaft text-center bg-white px-4 py-2 m-2 rounded-full w-11 h-11">
       AF
     </div>
   </div>
   With flex-no-shrink
-  <div class="flex w-15 bg-mystic items-center">
-    <div class="text-mineshaft text-center bg-white px-4 py-2 m-2">1</div>
-    <div class="flex-grow text-mineshaft text-center bg-white px-4 py-2 m-2">
+  <div className="flex w-15 bg-mystic items-center">
+    <div className="text-mineshaft text-center bg-white px-4 py-2 m-2">1</div>
+    <div className="flex-grow text-mineshaft text-center bg-white px-4 py-2 m-2">
       I'm too fat and squishing the circle on the right (not)
     </div>
-    <div class="text-mineshaft text-center bg-white px-4 py-2 m-2 rounded-full w-11 h-11 flex-no-shrink text-xs">
+    <div className="text-mineshaft text-center bg-white px-4 py-2 m-2 rounded-full w-11 h-11 flex-no-shrink text-xs">
       AF (flex-no-shrink)
     </div>
   </div>
