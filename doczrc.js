@@ -1,5 +1,7 @@
 import { css } from 'docz-plugin-css';
 
+import fs from 'fs';
+
 export default {
   title: 'Podium CSS',
   description: 'Documentation of Podium CSS',
@@ -19,10 +21,19 @@ export default {
     },
     showPlaygroundEditor: true
   },
+  htmlContext: {
+    head: {
+      // Hacky way to include podium.css globally 🙄
+      raw: `<style>${fs.readFileSync(
+        process.cwd() + '/src/podium.css'
+      )}</style>`
+    }
+  },
   plugins: [
     css({
       preprocessor: 'postcss'
     })
   ],
+
   dest: 'build'
 };
