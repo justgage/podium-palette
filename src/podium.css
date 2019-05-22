@@ -4485,7 +4485,7 @@
   width: 100vw;
 }
 
-.w-measure{
+.w-readable{
   width: 30em;
 }
 
@@ -9171,7 +9171,7 @@
     width: 100vw;
   }
 
-  .sm\:w-measure{
+  .sm\:w-readable{
     width: 30em;
   }
 
@@ -13629,7 +13629,7 @@
     width: 100vw;
   }
 
-  .md\:w-measure{
+  .md\:w-readable{
     width: 30em;
   }
 
@@ -18087,7 +18087,7 @@
     width: 100vw;
   }
 
-  .lg\:w-measure{
+  .lg\:w-readable{
     width: 30em;
   }
 
@@ -22545,7 +22545,7 @@
     width: 100vw;
   }
 
-  .xl\:w-measure{
+  .xl\:w-readable{
     width: 30em;
   }
 
