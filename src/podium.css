@@ -5200,27 +5200,27 @@ video {
   }
 }
 
-@-webkit-keyframes spinAnimation {
-  0% {
-    -webkit-transform: rotateZ(90deg);
-            transform: rotateZ(90deg);
+@-webkit-keyframes spinAni {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 
-  100% {
-    -webkit-transform: rotateZ(1170deg);
-            transform: rotateZ(1170deg);
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@keyframes spinAnimation {
-  0% {
-    -webkit-transform: rotateZ(90deg);
-            transform: rotateZ(90deg);
+@keyframes spinAni {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 
-  100% {
-    -webkit-transform: rotateZ(1170deg);
-            transform: rotateZ(1170deg);
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -5270,10 +5270,8 @@ video {
 }
 
 .spin {
-  -webkit-animation: spinAnimation 1.125s cubic-bezier(0.5, 0.1, 0.5, 0.9) 0.46875s
-    infinite;
-          animation: spinAnimation 1.125s cubic-bezier(0.5, 0.1, 0.5, 0.9) 0.46875s
-    infinite;
+  -webkit-animation: spinAni 1.125s cubic-bezier(0.5, 0.1, 0.5, 0.9) 0.46875s infinite;
+          animation: spinAni 1.125s cubic-bezier(0.5, 0.1, 0.5, 0.9) 0.46875s infinite;
 }
 
 .rotate-180 {

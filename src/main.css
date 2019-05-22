@@ -70,13 +70,13 @@
   }
 }
 
-@keyframes spinAnimation {
-  0% {
-    transform: rotateZ(90deg);
+@keyframes spinAni {
+  from {
+    transform: rotate(0deg);
   }
 
-  100% {
-    transform: rotateZ(1170deg);
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -114,8 +114,7 @@
 }
 
 .spin {
-  animation: spinAnimation 1.125s cubic-bezier(0.5, 0.1, 0.5, 0.9) 0.46875s
-    infinite;
+  animation: spinAni 1.125s cubic-bezier(0.5, 0.1, 0.5, 0.9) 0.46875s infinite;
 }
 
 .rotate-180 {
