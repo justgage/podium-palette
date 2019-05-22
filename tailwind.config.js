@@ -38,6 +38,9 @@ module.exports = {
     },
     // Extend section will allow you to add a single value to the Tailwind defaults
     extend: {
+      width: {
+        measure: '30em'
+      },
       boxShadow: {
         focus: '0 0 0 3px rgba(76,118,224, 0.5) '
       },
