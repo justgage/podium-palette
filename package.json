@@ -14,7 +14,7 @@
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "build-css": "./node_modules/.bin/tailwind build src/main.css --config tailwind.config.js -o src/podium.css && ./src/table-of-styles/refresh",
-    "deploy": "npm run build && cp src/podium.css build/ && cp build/index.html build/200.html && npx surge -d podium-css.surge.sh -p build"
+    "deploy": "npm run build && cp src/podium.css build/ && cp src/podium.css build/static/css && cp build/index.html build/200.html && npx surge -d podium-css.surge.sh -p build"
   },
   "devDependencies": {
     "react": "^16.6.3",

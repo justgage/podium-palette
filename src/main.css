@@ -83,6 +83,27 @@
   }
 }
 
+@font-face {
+  font-family: Graphik;
+  src: url(//assets.podium.com/fonts/Graphik-Regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url(//assets.podium.com/fonts/Graphik-Semibold.woff) format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url(//assets.podium.com/fonts/Graphik-Bold.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
 .fade-in {
   animation: fadeIn 0.25s ease;
 }
