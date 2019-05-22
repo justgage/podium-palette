@@ -1,6 +1,6 @@
 {
   "name": "@podiumhq/css",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A utility-first, CSS based, design system for Podium",
   "main": "src/podium.css",
   "files": [
