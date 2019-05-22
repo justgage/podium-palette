@@ -41,6 +41,9 @@ module.exports = {
       width: {
         readable: '30em'
       },
+      maxWidth: theme => ({
+        ...theme('width')
+      }),
       boxShadow: {
         focus: '0 0 0 3px rgba(76,118,224, 0.5) '
       },
