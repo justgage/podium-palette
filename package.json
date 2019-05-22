@@ -1,9 +1,13 @@
 {
   "name": "@podiumhq/css",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A utility-first, CSS based, design system for Podium",
   "main": "src/podium.css",
-  "files": ["src/podium.css", "src/main.css", "tailwind.config.js"],
+  "files": [
+    "src/podium.css",
+    "src/main.css",
+    "tailwind.config.js"
+  ],
   "scripts": {
     "start": "docz dev",
     "build": "npm run build-css && docz build",
