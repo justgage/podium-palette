@@ -34,6 +34,50 @@ You can try it over in this codesandbox: <https://codesandbox.io/embed/podiumcss
 
 Or you can edit any example in these docs!
 
+### Responsive Template
+
+Here's a simple responsive HTML template using the "CDN" (right now surge) to load it in.
+It should work as long as you have an internet connection.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Podium CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://podium-css.surge.sh/static/css/podium.css"
+    />
+    <link
+      rel="preload"
+      href="//assets.podium.com/fonts/Graphik-Regular.woff"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="//assets.podium.com/fonts/Graphik-Bold.woff"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="//assets.podium.com/fonts/Graphik-Semibold.woff"
+      as="font"
+      type="font/woff2"
+      crossorigin=""
+    />
+  </head>
+
+  <body class="bg-whiteSmoke font-sans p-10">
+    <h1 class="text-red">Some cool thing that's below me</h1>
+  </body>
+</html>
+```
+
 ## Install and Usage
 
 Install via NPM
