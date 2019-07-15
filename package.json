@@ -17,10 +17,10 @@
     "deploy": "npm run build && cp src/podium.css build/ && cp src/podium.css build/static/css && cp build/index.html build/200.html && npx surge -d podium-css.surge.sh -p build"
   },
   "devDependencies": {
-    "react": "^16.6.3",
     "docz": "^0.12.9",
     "docz-plugin-css": "^0.11.0",
-    "parcel-bundler": "^1.6.1",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.6.3",
     "tailwindcss": "^1.0.1"
   },
   "dependencies": {

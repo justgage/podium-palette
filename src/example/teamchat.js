@@ -225,7 +225,7 @@ let NavBar = () => (
 );
 
 const Sidebar = () => (
-  <div className="bg-whiteSmoke p-5 w-64 flex-shrink-0 hidden sm:block h-full">
+  <div className="bg-whiteSmoke p-5 w-64 flex-shrink-0 hidden lg:block h-full">
     <h2 className="text-xs uppercase font-semibold text-steel">Customers</h2>
     <div>
       <div className="px-3 text-sm hover:bg-whiteSmokeDark rounded font-semibold text-mineShaft my-1 py-1 flex">
