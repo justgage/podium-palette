@@ -1,6 +1,9 @@
 import React from 'react';
 import '../podium.css';
 
+// This is an older version of Messenger, it's out of date with the new version of Podium CSS so it's quite broken. However wouldn't
+// be too hard to get working
+
 export default () => (
   <div className="w-screen h-screen bg-whiteSmoke flex flex-col">
     <nav className="_nav flex-no-shrink w-full bg-black text-white flex h-11 items-center">
@@ -261,7 +264,7 @@ export default () => (
         <div className="_middle-topbar h-11 border-b border-mystic px-4 items-center flex flex-no-shrink">
           <div className="_avatar px-4 flex items-center justify-center flex-no-shrink">
             <img
-              className="h-9"
+              className="h-8"
               src="https://s3.amazonaws.com/podium-prod/avatar/unknown-user.png"
             />
           </div>
@@ -381,7 +384,7 @@ export default () => (
       <div className="_right-sidebar w-1/3 hidden lg:block relative">
         <div className="_user-topcard border-b border-mystic pb-7">
           <img
-            className="absolute pin-t pin-r h-9 p-4 m-2 hover:bg-whiteSmoke rounded-full transition-all cursor-pointer"
+            className="absolute pin-t pin-r h-8 p-4 m-2 hover:bg-whiteSmoke rounded-full transition-all cursor-pointer"
             src="https://messenger.podium.com/static/media/menu.e418c7b4.svg"
           />
           <div className="_avatar px-4 flex items-center mt-7 justify-center flex-no-shrink">
